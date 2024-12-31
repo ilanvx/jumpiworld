@@ -1,0 +1,177 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('background.png'); /* רקע מוביל ל-background.png */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333; /* טקסט כהה */
+}
+.logo-container {
+    position: absolute;
+    top: -60px; /* מקם את הלוגו יותר למעלה */
+    left: 50%; /* למקם אותו במרכז המסך אופקית */
+    transform: translateX(-50%); /* יישור מושלם למרכז */
+    text-align: center;
+    width: auto; /* שינוי לרוחב אוטומטי */
+    z-index: 10;
+}
+
+.logo-container img {
+    max-width: 250px; /* הגדלת הלוגו */
+    height: auto;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85); /* שקיפות קלה */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.top-toolbar {
+    background-color: #6a0dad; /* סגול כהה */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.top-toolbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-toolbar .username-coins p {
+    margin: 0;
+}
+
+.top-toolbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+.top-toolbar .nav-links a:hover {
+    background-color: #9370db; /* סגול בהיר בעת ריחוף */
+    border-radius: 5px;
+}
+
+.error-msg {
+    color: #721c24; /* אדום כהה */
+    background-color: #f8d7da; /* רקע הודעת שגיאה עם גוון ורוד עדין */
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.background {
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85); /* שקיפות קלה יותר */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.centered {
+    margin: auto;
+}
+
+h1 {
+    color: #6a0dad; /* סגול כהה */
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555; /* טקסט כהה */
+    font-size: 1rem;
+}
+
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333; /* טקסט כהה */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #9370db; /* סגול בהיר בעת פוקוס */
+    outline: none;
+}
+
+.login-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: #6a0dad; /* סגול כהה */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #9370db; /* סגול בהיר בעת ריחוף */
+}
+
+.link {
+    color: #9370db; /* סגול בהיר */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #b19cd9; /* גוון בהיר יותר בעת ריחוף */
+    text-decoration: underline;
+}

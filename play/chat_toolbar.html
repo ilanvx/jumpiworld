@@ -1,0 +1,89 @@
+<!-- HTML: כפתור פתיחת סל החפצים -->
+<div id="toolbar">
+    <img id="itemBagButton" src="../game/assets/card_button.png" alt="Item Bag" style="cursor: pointer;">
+</div>
+
+<!-- HTML: חלון הפופ-אפ של סל החפצים -->
+<div id="itemBagModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>סל החפצים</h2>
+        <div id="characterPreview">
+            <img id="characterFront" src="game/character_front.png" alt="Character Preview">
+        </div>
+        <div id="itemCategories">
+            <!-- פה יופיעו קטגוריות הפריטים -->
+        </div>
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+    /* עיצוב כפתור הסל */
+    #toolbar {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+    
+    /* עיצוב חלון פופ-אפ */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        text-align: center;
+        border-radius: 8px;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    #characterPreview {
+        margin-top: 20px;
+    }
+</style>
+
+<!-- JS: פתיחת וסגירת חלון סל החפצים -->
+<script>
+    // פתיחת חלון סל החפצים
+    document.getElementById("itemBagButton").onclick = function() {
+        document.getElementById("itemBagModal").style.display = "block";
+    }
+
+    // סגירת חלון סל החפצים
+    document.getElementsByClassName("close")[0].onclick = function() {
+        document.getElementById("itemBagModal").style.display = "none";
+    }
+
+    // סגירת חלון לחיצה מחוץ לתיבה
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("itemBagModal")) {
+            document.getElementById("itemBagModal").style.display = "none";
+        }
+    }
+</script>
